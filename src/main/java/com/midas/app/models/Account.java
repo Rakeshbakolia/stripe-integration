@@ -1,5 +1,6 @@
 package com.midas.app.models;
 
+import com.midas.app.providers.enums.Provider;
 import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 import java.util.UUID;
@@ -19,6 +20,13 @@ public class Account {
   @Column(name = "id")
   @GeneratedValue
   private UUID id;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "providerType")
+  private Provider providerType;
+
+  @Column(name = "provider_id")
+  private String providerId;
 
   @Column(name = "first_name")
   private String firstName;
