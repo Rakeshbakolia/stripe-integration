@@ -6,7 +6,7 @@ import io.temporal.workflow.WorkflowMethod;
 
 @WorkflowInterface
 public interface CreateAccountWorkflow {
-  String QUEUE_NAME = "create-account-workflow";
+  public String QUEUE_NAME = "create-account-workflow";
 
   /**
    * createAccount creates a new account in the system or provider.
