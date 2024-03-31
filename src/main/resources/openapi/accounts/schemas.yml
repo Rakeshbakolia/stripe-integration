@@ -18,6 +18,11 @@ components:
           description: "Email of user"
           example: "john@doe.com"
           required: true
+        providerType:
+          type: string
+          description: "payment provider"
+          example: "STRIPE"
+          required: true
     account:
       type: object
       properties:
@@ -27,6 +32,14 @@ components:
           description: "User's ID"
           readOnly: true
           example: "fba5b240-0e68-4e64-aca6-f12022dc4be3"
+        providerType:
+          type: string
+          description: "payment provider"
+          example: "STRIPE"
+        providerId:
+          type: string
+          description: "user's account id at payment provider"
+          example: "acct_1P04QeH8OzKt8sMn"
         firstName:
           type: string
           description: "User's first name"
